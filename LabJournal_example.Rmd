@@ -1,0 +1,106 @@
+---
+title: "Project Title"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    df_print: paged
+  word_document:
+    fig_width: 10
+    fig_height: 6
+  pdf_document:
+    fig_width: 8
+    fig_height: 6
+    toc: true
+    toc_depth: 3
+    number_sections: true
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(officer)
+library(Rcpp)
+library(ggplot2)
+library(plotly)
+library(knitr)
+library(patchwork)
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ragg)
+library(htmlwidgets)
+library(writexl)
+library(gridExtra)
+library(openxlsx)
+library(drc)
+```
+
+\newpage 
+
+# General Information
+
+-   Experiment Path: your path
+-   Planned on: planneddate of experiment
+
+# Methods
+
+## sample information
+
+## sample preparation
+
+-   **1 M ammonium bicarbonate**
+    -   50 mg ammonium bicarbonate in 633 $\mu$l dest. H~2~O
+-   **50 mM Substance A in 50 mM ammonium bicarbonate**
+    -   7.7 mg Substance A in 1 ml 50 mM ammonium bicarbonate
+
+## Incubation of enzyme with Substance B
+
+-   **400** $\mu$M Substance B in 40 $\mu$M enzyme in 1 M ammonium
+    bicarbonate (1:10)
+
+-   4 $\mu$l 25 mM Substance B solution in 121 $\mu$l 80 $\mu$M enzyme
+    solution + 125 $\mu$l 1 M ammonium bicarbonate (1:10)
+
+-   Incubation for 1 h at 37 °C
+
+## Protocol A for enzyme digestions
+
+### Preparation of 1 mg/ml enzyme solution
+
+### Reduction of disulfide bonds
+
+### Alkylation of free thiols
+
+### Enzymatic digestion
+
+### Stopping enzymatic digestions
+
+
+## LC-MS measurement
+
+### Parameters
+
+# Results
+
+## Peptide Mass Fingerprint (PMF)
+
+```{r dateofexperiment_name, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, include = FALSE}
+
+source("yourpath", local = knitr::knit_global())
+```
+
+```{r plot 1, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, include = TRUE, fig.cap="Matrix: HCCA"}
+plot_1
+```
+
+![Result of database search](image.png)
+# Further Reading
+
+-   [**In-solution protein
+    digestion**](https://massspec.chem.ox.ac.uk/solution-protein-digestion)
